@@ -44,10 +44,11 @@ n=100
 data = generate_data(n)
 
 
-# In[54]:
+# In[189]:
 
 c = 1./9 + n
-vals = [scipy.stats.distributions.norm.pdf(m, data.sum()/c, np.sqrt(1./c)) for m in np.arange(12.5,13.5,0.01)]
+vals = [scipy.stats.distributions.norm.pdf(m, data.sum()/c, np.sqrt(1./c)) 
+        for m in np.arange(12.5,13.5,0.01)]
 
 
 # In[185]:
@@ -72,12 +73,12 @@ def importance_sample(data, nsamps=100):
     return np.exp(wts), mus
 
 
-# In[182]:
+# In[187]:
 
-wts, mus = importance_sample(data, 30000)
+wts, mus = importance_sample(data, 100000)
 
 
-# In[186]:
+# In[188]:
 
 inds = np.argsort(mus)
 wts_s = wts[inds]
