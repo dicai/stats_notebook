@@ -249,6 +249,26 @@ pylab.figure()
 plot_coefs(mother_coefs, scale=0.2)
 
 
+# In[183]:
+
+y = [finite_5(i) for i in x]
+pylab.plot(x, y)
+pylab.title(r"Doppler function approx at resolution $J=5$")
+pylab.figure()
+father_coefs, mother_coefs = get_coefs(5, x)
+plot_coefs(mother_coefs, scale=0.2)
+
+
+# In[184]:
+
+y = [finite_8(i) for i in x]
+pylab.plot(x, y)
+pylab.title(r"Doppler function approx at resolution $J=8$")
+pylab.figure()
+father_coefs, mother_coefs = get_coefs(8, x)
+plot_coefs(mother_coefs, scale=0.15)
+
+
 # In[ ]:
 
 
