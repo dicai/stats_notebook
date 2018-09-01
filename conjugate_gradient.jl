@@ -94,7 +94,6 @@ xsol
 
 Seaborn.semilogy(0:length(errors)-1, errors)
 xlabel("iteration"); ylabel("total absolute error")
-#savefig("/Users/dicai/git/blog/assets/ex1.png")
 
 # confirm these are 0
 @assert D[:,1]' * A * D[:,2] < 10e-6
