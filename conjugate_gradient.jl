@@ -3,7 +3,7 @@ using Random
 using LinearAlgebra
 using PyPlot
 using Seaborn
-PyPlot.svg(true)
+#PyPlot.svg(true)
 
 function iterate_CG(xk, rk, pk, A)
     """
